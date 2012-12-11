@@ -283,8 +283,12 @@ namespace Newtonsoft.Json.Serialization
 
       if (constructors.Length == 1)
         return constructors[0];
-      else
-        return null;
+
+      // little hack to get Version objects to deserialize correctly
+      if (objectType == typeof(Version))
+          return objectType.GetConstructor(new[] { typeof(int), typeof(int), typeof(int), typeof(int) });
+
+      return null;
     }
 
     /// <summary>

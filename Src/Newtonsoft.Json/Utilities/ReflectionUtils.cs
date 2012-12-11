@@ -131,6 +131,10 @@ namespace Newtonsoft.Json.Utilities
     {
       ValidationUtils.ArgumentNotNull(t, "t");
 
+      // little hack to get Version objects to deserialize correctly
+      if (t == typeof (Version))
+        return false;
+
       if (t.IsValueType)
         return true;
 

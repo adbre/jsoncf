@@ -67,6 +67,7 @@
     <Compile Include="ConstructorHandling.cs" />
     <Compile Include="Converters\BinaryConverter.cs" />
     <Compile Include="Converters\BsonObjectIdConverter.cs" />
+    <Compile Include="Converters\VersionConverter.cs" />
     <Compile Include="Converters\CustomCreationConverter.cs" />
     <Compile Include="Converters\DataSetConverter.cs" />
     <Compile Include="Converters\DataTableConverter.cs" />
